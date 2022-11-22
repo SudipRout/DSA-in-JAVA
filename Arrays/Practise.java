@@ -1,17 +1,36 @@
+/* WAP to  take a matrix as input from the user. Search for a given number x and
+print the indices at which it occurs */
+
 import java.util.*;
 
 public class Practise {
-    public static int calculateProduct(int a, int b) {
-        return a * b;
-    }
-    
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the numbers:");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        System.out.print("Enter the numbers of Rows: ");
+        int rows = sc.nextInt();
+        System.out.print("Enter the numbers of columns: ");
+        int cols = sc.nextInt();
 
-        int product = calculateProduct(a,b); //Calling the function
-        System.out.println("The product of two numbers is: "+ product);
+        int[][] numbers = new int[rows][cols];
+
+        // input
+        // rows
+        for (int i = 0; i < rows; i++) {
+            // columns
+            for (int j = 0; j < cols; j++) {
+                numbers[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.print("Enter the number you want to search: ");
+        int x = sc.nextInt();
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++)
+                if (numbers[i][j] == x) {
+                    System.out.println("(" + i +","+ j + ")");
+                    // System.out.println("x found at location ("+i+","+j+")");
+                }
+        }
     }
 }

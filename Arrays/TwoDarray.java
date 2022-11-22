@@ -3,7 +3,7 @@ print the indices at which it occurs */
 
 import java.util.*;
 
-public class 2Darray {
+public class TwoDarray {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the numbers of Rows: ");
