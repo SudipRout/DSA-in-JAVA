@@ -34,3 +34,5 @@ public class MaxMinofArray {
         System.out.println("The smallest number is : " + min);
     }
 }
+
+//new comment2
