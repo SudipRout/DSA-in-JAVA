@@ -1,4 +1,4 @@
-public class BubbleSort {
+public class BubbleSort { //Optimized Bubble Sort
 
 	public static void main(String[] args) {
 	    int nums[] = {7, 1, 5, 3, 6, 2, 4}; //O(n)
