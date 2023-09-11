@@ -8,15 +8,15 @@ public class SelectionSort {
 
     public static void selectionSort(int nums[]){
         for (int i = 0; i < nums.length-1; i++) {
-            int minPos = i;
+            int min = i;
             for (int j = i+1; j < nums.length; j++) {
-                if (nums[minPos] > nums[j]) {
-                    minPos = j;
+                if (nums[min] > nums[j]) {
+                    min = j;
                 }
             }
             //swap
-            int temp = nums[minPos];
-            nums[minPos] = nums[i];
+            int temp = nums[min];
+            nums[min] = nums[i];
             nums[i] = temp;
         }
     }
