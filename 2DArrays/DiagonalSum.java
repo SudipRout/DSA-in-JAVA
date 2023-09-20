@@ -9,23 +9,26 @@ public class DiagonalSum {
 
     private static int diagonalSum(int matrix[][]) {
         int sum = 0;
-        // for (int i = 0; i < matrix.length; i++) {
-        //     for (int j = 0; j < matrix[0].length; j++) {
+        int row = matrix.length;
+        int column = matrix[0].length;
+        // for (int i = 0; i < row; i++) {
+        //     for (int j = 0; j < column; j++) {
         //         if (i == j) {
         //             sum += matrix[i][j];
         //         }
-        //         else if(i+j == matrix.length-1) {
+        //         else if(i+j == row-1) {
         //             sum += matrix[i][j];
         //         }
         //     }
         // }
 
-        for (int i = 0; i < matrix.length; i++) {
+        for (int i = 0; i < row; i++) {
             //PrimaryDiagonal
             sum+= matrix[i][i];
             //SecondaryDiagonal
-            if (i != matrix.length-1-i)
-                sum+= matrix[i][matrix.length-i-1];
+            if (i != row-1-i)
+                sum+= matrix[i][row-i-1]; //i+j = [row-1]
+                                          //j = [row-1-i]
         }
         return sum;
     }
